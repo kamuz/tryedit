@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>Tryit Editor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="css/codemirror.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="trytopnav">
+        <div class="w3-bar w3-light-grey" style="">
+            <a href="javascript:void(0);" onclick="restack(currentStack)" title="Change Orientation" class="w3-button w3-bar-item topnav-icons fa fa-rotate"></a>
+            <button class="w3-button w3-bar-item w3-green w3-hover-white w3-hover-text-green" onclick="submitTryit(1)">Run &raquo;</button>
+            <span class="w3-right w3-hide-medium w3-hide-small"></span>
+            <span class="w3-right w3-hide-small"><span id="framesize"></span></span>
+        </div>
+    </div>
+    <div id="shield"></div>
+    <a href="javascript:void(0)" id="dragbar"></a>
+    <div id="container">
+        <div id="menuOverlay" class="w3-overlay w3-transparent" style=""></div>
+        <div id="textareacontainer">
+            <div id="textarea">
+                <div id="textareawrapper">
+                    <textarea autocomplete="off" id="textareaCode" wrap="logical" spellcheck="false"></textarea>
+                    <form id="codeForm" autocomplete="off">
+                        <input type="hidden" name="code" id="code" />
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="iframecontainer">
+            <div id="iframe">
+                <div id="iframewrapper"></div>
+            </div>
+        </div>
+    </div>
+    <script src="js/codemirror.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
